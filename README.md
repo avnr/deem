@@ -65,10 +65,10 @@ Command Line Options
 - `-q` or `--quiet`: By default `deem` will print during its execution a stats summary that details how many
 items are in the current `ar` archive, how many in the new stream, and how many items will be inserted/updated
 or removed. The `--quiet` option will suppress this message. In addition `deem` prints a message when
-it creates a new new archive and when it is used in "test" mode (see next), `--quiet` will suppress these
+it creates a new archive and when it is used in "test" mode (see next), `--quiet` will suppress these
 messages as well.
 
-- `-t` or `--test`: Running deem in test mode will cause `deem` to check for changes and print stats,
+- `-t` or `--test`: Running `deem` in test mode will cause `deem` to check for changes and print stats,
 but the archive will not be touched, i.e. it will remain unchanged.
 
 - `-i <filename>` or `--input <filename>`: Read the key-value pairs from &lt;filename&gt; rather than from stdin.
@@ -78,11 +78,9 @@ Note
 
 The standard `make` utility targets can depend on files in `ar` archives, but not on archives in other formats.
 However, since `ar` is only partially standardized and its archive format is highly implementation dependant,
-the `deem` utility doesn't manipulate the archive directly, but instead calls the `ar` utility to
-perform all archive operations. This means that:
-
-- `ar` must be launchabe by the user and its location must be in PATH.
-- The `ar` utility seen by `deem` must be the same or compatible with the `ar` utility that will be used by `make`.
+the `deem` utility doesn't manipulate the archive directly, but instead has to call the `ar` utility to
+perform all archive operations. This means that the `ar` utility seen by `deem` must be the same or compatible
+with the `ar` utility that will be used by `make`.
 
 Build
 ---
@@ -91,9 +89,9 @@ Build
     cd deem
     make
 
-Tested on Linux (Debian), Windows + MinGW, Windows + Cygwin.
-Compilation fails on OpenBSD, you can make it work by adding -ftrampolines to the compilation.
-If you've tested on additional platforms then please let me know.
+Tested on Linux (Debian), Windows + MinGW, Windows + Cygwin. Compilation fails on OpenBSD, you can make
+it work by adding `-ftrampolines` to the compilation. If you've tested on additional platforms then please let
+me know.
 
 Test
 ---
