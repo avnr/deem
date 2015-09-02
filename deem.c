@@ -1,5 +1,5 @@
 /*
-    deem version 1.0 - Key-Value ar Archive
+    deem version 1.0 - Key-Value ar Archive for Non-File Makefile Dependencies
     Copyright (c) 2015 Avner Herskovits
 
     MIT License

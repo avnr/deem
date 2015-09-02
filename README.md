@@ -1,6 +1,6 @@
 deem
 ===
-Non-File Makefile Dependencies
+Key-Value ar Archive for Non-File Makefile Dependencies
 ---
 The `deem` utility accepts an input stream of key-value pairs and stores them in an `ar` archive,
 where the key is used as a filename and the value as file contents. In the subsequent invocations
